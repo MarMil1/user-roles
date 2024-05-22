@@ -1,5 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
+<% if current_user %>
+  <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to "Register", new_user_registration_path %>
+  <%= link_to "Login", new_user_session_path %>
+<% end %>
+
 <h1>Posts</h1>
 
 <div id="posts">
