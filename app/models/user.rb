@@ -7,6 +7,14 @@ class User < ApplicationRecord
 
   after_create :assign_default_role
 
+  validate :validate_single_role
+
+  def validate_single_role
+    if self.roles.count > 1
+      errors.add(:roles, "User can only have one role.")
+    end
+  end
+
   def assign_default_role
     # if the user form does not match Faculty or Admin information
     if admin_user_credentials_valid?
