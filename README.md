@@ -1,6 +1,7 @@
 # User roles web app
 
-**Description**: Role base access application using Devise and Rolify in which admin users can manage regular user's roles.
+**Description**: Role base access application using Devise and Rolify
+in which admin users can manage regular user's roles.
 
 - Ruby version: 3.3.1
 - Rails version: 7.1.3.2
@@ -28,7 +29,8 @@
 
 - Install devise gem by running **bundle add devise** in terminal
 - Run generator for devise **rails generate devise:install**
-- In developmenr.rb add `config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }`
+- In developmenr.rb add:
+  `config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }`
 - Run **rails g devise user**
 - Run **rails db:migrate**
 
